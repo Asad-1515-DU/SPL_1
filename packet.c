@@ -1,4 +1,5 @@
 // Packet structure
+#include<stdio.h>
 struct Packet {
     int sequence_number;
     char data;
@@ -6,7 +7,7 @@ struct Packet {
     struct Packet* next;
 };
 
-// Utility function to create a new packet
+// Function to create a new packet
 struct Packet* create_packet(int seq, char data) {
     struct Packet* new_packet = (struct Packet*)malloc(sizeof(struct Packet));
     new_packet->sequence_number = seq;
@@ -16,7 +17,7 @@ struct Packet* create_packet(int seq, char data) {
     return new_packet;
 }
 
-// Utility function to append a packet to the list
+// Function to append a packet to the list
 void append_packet(struct Packet** head, int seq, char data) {
     struct Packet* new_packet = create_packet(seq, data);
     if (*head == NULL) {
@@ -30,7 +31,7 @@ void append_packet(struct Packet** head, int seq, char data) {
     temp->next = new_packet;
 }
 
-// Utility function to delete a packet from the list
+// Function to delete a packet from the list
 void delete_packet(struct Packet** head, int seq) {
     struct Packet* temp = *head;
     struct Packet* prev = NULL;
@@ -45,15 +46,4 @@ void delete_packet(struct Packet** head, int seq) {
         prev->next = temp->next;
     }
     free(temp);
-}
-
-// Utility function to find a packet by sequence number
-struct Packet* find_packet(struct Packet* head, int seq) {
-    while (head != NULL) {
-        if (head->sequence_number == seq) {
-            return head;
-        }
-        head = head->next;
-    }
-    return NULL;
 }
