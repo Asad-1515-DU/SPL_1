@@ -1,0 +1,53 @@
+1. Core Concepts:
+
+	Sender and Receiver  : Simulate two entities exchanging data packets.
+	Window Size          : Define the window size to control how many frames can be sent before needing an acknowledgment.
+	Acknowledgments (ACK): Handle acknowledgment of received packets.
+	Timers               : Manage timeouts for retransmission.
+	Sequence Numbers     : Use sequence numbers to track sent and received frames.
+    
+2. Functional Requirements:
+
+	Packet Handling:
+		(i) Implement sending and receiving functions.
+		(ii)Simulate packet loss or corruption (optional for testing).
+
+	Flow Control: 
+		Maintain the sliding window mechanism to ensure data consistency.
+
+	Error Control:
+		(i) Detect and recover from errors (e.g., using checksum or parity bit).
+		(ii)Retransmit lost or corrupted frames.
+
+	Timeout Management:
+		Implement timers to handle unacknowledged frames.
+
+3. C Language Concepts:
+
+	Structures     : Use struct to define packets (e.g., data, sequence number, checksum).
+	Multithreading : Simulate simultaneous sending and receiving.
+	File I/O       : Save logs or read data for transmission.
+	Dynamic Memory Allocation: Use malloc or arrays for buffer management.
+	Sockets        : If simulating real network communication.
+
+4. Algorithmic Steps:
+
+	Initialization:
+		(i) Set up sender and receiver buffers.
+		(ii)Initialize variables like window size, sequence numbers, etc.
+
+	Transmission Loop:
+		(i)  Send packets within the window range.
+		(ii) Wait for acknowledgments.
+		(iii)Slide the window upon successful acknowledgment.
+
+	Error Handling:
+		(i) Resend frames if a timeout occurs.
+		(ii)Handle duplicate or out-of-order acknowledgments.
+	Termination:
+		Stop when all packets are successfully transmitted and acknowledged.
+
+5. Testing and Debugging:
+
+	(i) Simulate normal conditions, packet loss, corruption, and duplicate acknowledgments.
+	(ii)Log the transmission details for analysis.
