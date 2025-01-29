@@ -5,7 +5,7 @@
 #include <stdlib.h> 
 #include <string.h>
 #include <sys/types.h>
-#include <netinet/in.h>
+
 
 #define MAX_DATA_SIZE 1024
 #define MAX_FRAME_SIZE 1034
