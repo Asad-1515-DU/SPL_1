@@ -23,6 +23,7 @@ struct ReceiverStats {
     }
 };
 
+
 bool verify_checksum(const string& packet, int& seq_num) {
     stringstream ss(packet);
     string seq_str, data, checksum_str;
