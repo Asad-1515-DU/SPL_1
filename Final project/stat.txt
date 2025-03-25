@@ -1,0 +1,7 @@
+Total Packets: 19
+Window Size: 3
+Packets Sent: 17
+Packets Lost: 2
+Retransmissions: 2
+ACK Received: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+Lost Packets: 12 18 

@@ -1,0 +1,4 @@
+g++ -o sender sender.cpp -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network
+g++ -o visualizer goBackNvisualizer.cpp -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network
+
+g++ -o receiver receiver.cpp -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network
